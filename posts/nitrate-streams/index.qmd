@@ -1,0 +1,76 @@
+---
+title: "Tracking Nitrate in Streams"
+author: "Ruowei Li"
+date: "2025-10-10"
+categories: [Water Quality, Data Story]
+---
+
+## Problem description
+
+Healthy rivers are vital for ecosystems and human communities, but invisible pollutants such as nitrate (NO₃⁻) can silently degrade water quality.\
+Nitrate mainly originates from fertiliser runoff and urban wastewater, and excessive levels lead to eutrophication—the growth of algal blooms that deplete oxygen and threaten aquatic life.
+
+Traditional monitoring based on monthly water samples often misses rapid changes in nitrate levels after rainfall or runoff events.\
+A recent study by Kermorvant et al. (2023) used high-frequency in-situ sensors to explore how nitrate concentrations vary through time and how they relate to other water-quality variables such as temperature, dissolved oxygen, and turbidity.\
+The goal was to identify which factors most strongly influence nitrate levels across diverse river environments.
+
+------------------------------------------------------------------------
+
+## Analysis
+
+**Data source.** Data were obtained from the National Ecological Observatory Network (NEON) in the United States. These sensors record readings every few minutes, providing a detailed picture of short-term water-quality dynamics.
+
+**Study sites.** Three contrasting streams were analysed:
+
+| Site      | Location                        | Typical nitrate (µM) |
+|-----------|---------------------------------|----------------------|
+| Arikaree  | Colorado — semi-arid grassland  | 5.5                  |
+| Caribou   | Alaska — sub-arctic forest      | 28                   |
+| Lewis Run | Virginia — agricultural + urban | 192                  |
+
+: Average nitrate across three NEON streams. {#tbl-sites}
+
+As Table @tbl-sites shows, **Lewis Run** (farmland + towns) had nitrate almost **40×** higher than **Arikaree**, highlighting strong land-use effects.
+
+## Findings
+
+```{r}
+#| label: fig-nitrate
+#| fig-cap: "Nitrate concentrations differ strongly across sites."
+#| message: false
+#| warning: false
+
+library(ggplot2)
+df <- data.frame(
+  Site = c("Arikaree", "Caribou", "Lewis Run"),
+  Nitrate = c(5.5, 28, 192)
+)
+ggplot(df, aes(Site, Nitrate)) +
+  geom_col() +
+  theme_minimal() +
+  labs(y = "Nitrate (µM)")
+```
+
+As Figure @fig-nitrate illustrates, nitrate levels increase from natural to agricultural catchments. Sensor data also revealed distinct event responses:
+
+At Arikaree, nitrate spiked after rainfall, consistent with fertiliser runoff.
+
+At Lewis Run, heavy flow diluted nitrate because rainfall added relatively clean water.
+
+Statistical modelling identified six important predictors — temperature, dissolved oxygen, turbidity, specific conductance, water level, and time — that together explained about 99 % of nitrate variation. Among these, specific conductance and dissolved oxygen were the most consistent indicators of nitrate change across all sites.
+
+## Conclusion and why it matters
+
+This research highlights how modern sensor technology transforms water-quality monitoring. Continuous, high-frequency data allow scientists and managers to detect nitrate spikes quickly and respond before serious ecological damage occurs.
+
+Two key takeaways stand out:
+
+Local context matters. Each catchment behaves differently; effective management must reflect local land use, climate, and hydrology.
+
+Continuous monitoring pays off. Tracking conductivity, oxygen, and flow provides cost-efficient insights into pollution sources and ecosystem health.
+
+Overall, the study demonstrates that combining sensor data with statistical modelling offers a powerful tool for protecting freshwater systems and informing evidence-based environmental policy.
+
+## Reference
+
+Kermorvant, C., Liquet, B., Litt, G., Wilson, K., & Robertson, A. (2023). Understanding links between water-quality variables and nitrate concentration in freshwater streams using high-frequency sensor data. PLOS ONE, 18(6), e0287640. <https://doi.org/10.1371/journal.pone.0287640>
