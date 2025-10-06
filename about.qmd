@@ -1,13 +1,25 @@
 ---
-title: "About"
 image: profile.jpg
+toc: false
 about:
   template: jolla
   links:
     - icon: github
-      text: Github
-      href: https://github.com/etc5523-2022
+      text: GitHub
+      href: https://github.com/RuoWei-ctrl
+    - icon: mail
+      text: Email
+      href: mailto:rlii0141@student.monash.edu
+---
+
+# Ruowei Li
+
+*Master of Business Analytics, Monash University*  
+*Data Analytics & Business Insights Enthusiast*
 
 ---
 
-This is a blog template for the ETC5523 Communicating with Data assessment at Monash University.
+I am currently studying for a **Master of Business Analytics** at **Monash University**, where I focus on data analytics, statistical modelling, and data storytelling. I enjoy exploring how data can be used to support business decisions and communicate insights effectively. My key interests include data visualization, predictive analytics, and translating complex results into practical business actions. I work mainly with **R**, **Python**, and **Quarto**, and I value clear and reproducible workflows.  
+
+This website is part of my ETC5523 course — *Communicating with Data* — where I share projects and blog posts that combine analytics, visualization, and communication.
+

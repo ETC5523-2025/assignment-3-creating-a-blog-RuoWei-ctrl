@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Ruowei Li · Data Blog"
+  title: "Ruowei Li"
   navbar:
     left:
       - text: Home
