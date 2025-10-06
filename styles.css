@@ -1,4 +1,15 @@
-/* css styles */
+/* Simple custom theme */
+
 .navbar-dark, .quarto-title-banner {
-  background-color: #006DAE;
+  background-color: #006DAB;
+}
+
+body {
+  background-color: #f9fbff;
+  color: #222;
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  color: #004c99;
 }
