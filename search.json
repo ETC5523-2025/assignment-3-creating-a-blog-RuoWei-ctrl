@@ -7,43 +7,50 @@
     "text": "Ruowei Li\nMaster of Business Analytics, Monash University\nData Analytics & Business Insights Enthusiast\n\nI am currently studying for a Master of Business Analytics at Monash University, where I focus on data analytics, statistical modelling, and data storytelling. I enjoy exploring how data can be used to support business decisions and communicate insights effectively. My key interests include data visualization, predictive analytics, and translating complex results into practical business actions. I work mainly with R, Python, and Quarto, and I value clear and reproducible workflows.\nThis website is part of my ETC5523 course — Communicating with Data — where I share projects and blog posts that combine analytics, visualization, and communication."
   },
   {
-    "objectID": "posts/ruowei-nitrate-blog/index.html",
-    "href": "posts/ruowei-nitrate-blog/index.html",
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog Template",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!"
+  },
+  {
+    "objectID": "posts/ruowei-nitrate-blog.html",
+    "href": "posts/ruowei-nitrate-blog.html",
     "title": "Tracking Nitrate in Streams",
     "section": "",
     "text": "Healthy rivers are vital for ecosystems and human communities, but invisible pollutants such as nitrate (NO₃⁻) can silently degrade water quality.\nNitrate mainly originates from fertiliser runoff and urban wastewater, and excessive levels lead to eutrophication—the growth of algal blooms that deplete oxygen and threaten aquatic life.\nTraditional monitoring based on monthly water samples often misses rapid changes in nitrate levels after rainfall or runoff events.\nA recent study by Kermorvant et al. (2023) used high-frequency in-situ sensors to explore how nitrate concentrations vary through time and how they relate to other water-quality variables such as temperature, dissolved oxygen, and turbidity.\nThe goal was to identify which factors most strongly influence nitrate levels across diverse river environments."
   },
   {
-    "objectID": "posts/ruowei-nitrate-blog/index.html#problem-description",
-    "href": "posts/ruowei-nitrate-blog/index.html#problem-description",
+    "objectID": "posts/ruowei-nitrate-blog.html#problem-description",
+    "href": "posts/ruowei-nitrate-blog.html#problem-description",
     "title": "Tracking Nitrate in Streams",
     "section": "",
     "text": "Healthy rivers are vital for ecosystems and human communities, but invisible pollutants such as nitrate (NO₃⁻) can silently degrade water quality.\nNitrate mainly originates from fertiliser runoff and urban wastewater, and excessive levels lead to eutrophication—the growth of algal blooms that deplete oxygen and threaten aquatic life.\nTraditional monitoring based on monthly water samples often misses rapid changes in nitrate levels after rainfall or runoff events.\nA recent study by Kermorvant et al. (2023) used high-frequency in-situ sensors to explore how nitrate concentrations vary through time and how they relate to other water-quality variables such as temperature, dissolved oxygen, and turbidity.\nThe goal was to identify which factors most strongly influence nitrate levels across diverse river environments."
   },
   {
-    "objectID": "posts/ruowei-nitrate-blog/index.html#analysis",
-    "href": "posts/ruowei-nitrate-blog/index.html#analysis",
+    "objectID": "posts/ruowei-nitrate-blog.html#analysis",
+    "href": "posts/ruowei-nitrate-blog.html#analysis",
     "title": "Tracking Nitrate in Streams",
     "section": "Analysis",
     "text": "Analysis\nData source. Data were obtained from the National Ecological Observatory Network (NEON) in the United States. These sensors record readings every few minutes, providing a detailed picture of short-term water-quality dynamics.\nStudy sites. Three contrasting streams were analysed:\n\n\n\nTable 1: Average nitrate across three NEON streams.\n\n\n\n\n\nSite\nLocation\nTypical nitrate (µM)\n\n\n\n\nArikaree\nColorado — semi-arid grassland\n5.5\n\n\nCaribou\nAlaska — sub-arctic forest\n28\n\n\nLewis Run\nVirginia — agricultural + urban\n192\n\n\n\n\n\n\nAs Table Table 1 shows, Lewis Run (farmland + towns) had nitrate almost 40× higher than Arikaree, highlighting strong land-use effects."
   },
   {
-    "objectID": "posts/ruowei-nitrate-blog/index.html#findings",
-    "href": "posts/ruowei-nitrate-blog/index.html#findings",
+    "objectID": "posts/ruowei-nitrate-blog.html#findings",
+    "href": "posts/ruowei-nitrate-blog.html#findings",
     "title": "Tracking Nitrate in Streams",
     "section": "Findings",
-    "text": "Findings\n\nlibrary(ggplot2)\ndf &lt;- data.frame(\n  Site = c(\"Arikaree\", \"Caribou\", \"Lewis Run\"),\n  Nitrate = c(5.5, 28, 192)\n)\nggplot(df, aes(Site, Nitrate)) +\n  geom_col() +\n  theme_minimal() +\n  labs(y = \"Nitrate (µM)\")\n\n\n\n\n\n\n\nFigure 1: Nitrate concentrations differ strongly across sites.\n\n\n\n\n\nAs Figure Figure 1 illustrates, nitrate levels increase from natural to agricultural catchments. Sensor data also revealed distinct event responses:\nAt Arikaree, nitrate spiked after rainfall, consistent with fertiliser runoff.\nAt Lewis Run, heavy flow diluted nitrate because rainfall added relatively clean water.\nStatistical modelling identified six important predictors — temperature, dissolved oxygen, turbidity, specific conductance, water level, and time — that together explained about 99 % of nitrate variation. Among these, specific conductance and dissolved oxygen were the most consistent indicators of nitrate change across all sites."
+    "text": "Findings\n\nlibrary(ggplot2)\ndf &lt;- data.frame(\n  Site = c(\"Arikaree\", \"Caribou\", \"Lewis Run\"),\n  Nitrate = c(5.5, 28, 192)\n)\nggplot(df, aes(Site, Nitrate)) +\n  geom_col() +\n  theme_minimal() +\n  labs(y = \"Nitrate (µM)\")\n\n\n\n\n\n\n\nFigure 1: Nitrate concentrations differ strongly across sites.\n\n\n\n\n\nAs Figure Figure 1 illustrates, nitrate concentrations vary markedly across the three streams, increasing from natural to agricultural catchments. Sensor data also revealed distinct event responses:\nAt Arikaree, nitrate spiked after rainfall, consistent with fertiliser runoff.\nAt Lewis Run, heavy flow diluted nitrate because rainfall added relatively clean water.\nStatistical modelling identified six important predictors — temperature, dissolved oxygen, turbidity, specific conductance, water level, and time — that together explained about 99 % of nitrate variation. Among these, specific conductance and dissolved oxygen were the most consistent indicators of nitrate change across all sites."
   },
   {
-    "objectID": "posts/ruowei-nitrate-blog/index.html#conclusion-and-why-it-matters",
-    "href": "posts/ruowei-nitrate-blog/index.html#conclusion-and-why-it-matters",
+    "objectID": "posts/ruowei-nitrate-blog.html#conclusion-and-why-it-matters",
+    "href": "posts/ruowei-nitrate-blog.html#conclusion-and-why-it-matters",
     "title": "Tracking Nitrate in Streams",
     "section": "Conclusion and why it matters",
     "text": "Conclusion and why it matters\nThis research highlights how modern sensor technology transforms water-quality monitoring. Continuous, high-frequency data allow scientists and managers to detect nitrate spikes quickly and respond before serious ecological damage occurs.\nTwo key takeaways stand out:\nLocal context matters. Each catchment behaves differently; effective management must reflect local land use, climate, and hydrology.\nContinuous monitoring pays off. Tracking conductivity, oxygen, and flow provides cost-efficient insights into pollution sources and ecosystem health.\nOverall, the study demonstrates that combining sensor data with statistical modelling offers a powerful tool for protecting freshwater systems and informing evidence-based environmental policy."
   },
   {
-    "objectID": "posts/ruowei-nitrate-blog/index.html#reference",
-    "href": "posts/ruowei-nitrate-blog/index.html#reference",
+    "objectID": "posts/ruowei-nitrate-blog.html#reference",
+    "href": "posts/ruowei-nitrate-blog.html#reference",
     "title": "Tracking Nitrate in Streams",
     "section": "Reference",
     "text": "Reference\nKermorvant, C., Liquet, B., Litt, G., Wilson, K., & Robertson, A. (2023). Understanding links between water-quality variables and nitrate concentration in freshwater streams using high-frequency sensor data. PLOS ONE, 18(6), e0287640. https://doi.org/10.1371/journal.pone.0287640"
@@ -53,20 +60,13 @@
     "href": "posts/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Tracking Nitrate in Streams\n\n\n\n\n\n\n\n\n\n\n\nOct 10, 2025\n\n\nRuowei Li\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog Template\n\n\n\n\n\n\n\n\n\n\n\nJul 18, 2022\n\n\nEmi Tanaka\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog Template",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nTracking Nitrate in Streams\n\n\n\n\n\n\nData Story\n\n\nWater Quality\n\n\n\n\n\n\n\n\n\nOct 10, 2025\n\n\nRuowei Li\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog Template\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 18, 2022\n\n\nEmi Tanaka\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "ETC5523 Blog Assessment",
     "section": "",
-    "text": "Blog\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTracking Nitrate in Streams\n\n\n\n\n\n\nWater Quality\n\n\nData Story\n\n\n\n\n\n\n\n\n\nOct 10, 2025\n\n\nRuowei Li\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog Template\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 18, 2022\n\n\nEmi Tanaka\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome to my ETC5523 blog!\nHere you can find my latest post and reflections for this course.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nBlog\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTracking Nitrate in Streams\n\n\n\n\n\n\nData Story\n\n\nWater Quality\n\n\n\n\n\n\n\n\n\nOct 10, 2025\n\n\nRuowei Li\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog Template\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJul 18, 2022\n\n\nEmi Tanaka\n\n\n\n\n\n\nNo matching items"
   }
 ]

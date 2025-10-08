@@ -2,7 +2,7 @@
   {
     "listing": "/posts/index.html",
     "items": [
-      "/posts/ruowei-nitrate-blog/index.html",
+      "/posts/ruowei-nitrate-blog.html",
       "/posts/welcome/index.html"
     ]
   },
@@ -10,7 +10,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/index.html",
-      "/posts/ruowei-nitrate-blog/index.html",
+      "/posts/ruowei-nitrate-blog.html",
       "/posts/welcome/index.html"
     ]
   }

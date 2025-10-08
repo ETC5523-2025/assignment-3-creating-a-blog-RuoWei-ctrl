@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-search","listing-category"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -159,7 +159,7 @@ window.Quarto = {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts/"> 
+    <a class="nav-link" href="./posts/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -207,13 +207,40 @@ window.Quarto = {
 
 
 
+<p>Welcome to my ETC5523 blog!<br>
+Here you can find my latest post and reflections for this course.</p>
 
 
 
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1759898282222" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1759902879465" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 <div class="thumbnail">
 <p><a href="./posts/index.html" class="no-external"></a></p><a href="./posts/index.html" class="no-external">
 <p class="card-img-top"><img src="posts/welcome/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
@@ -228,21 +255,22 @@ window.Quarto = {
 </div>
 <div class="listing-description">
 <a href="./posts/index.html" class="no-external">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="V2F0ZXIlMjBRdWFsaXR5JTJDRGF0YSUyMFN0b3J5" data-listing-date-sort="1760014800000" data-listing-file-modified-sort="1759899760358" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="559">
-<div class="thumbnail">
-<p></p>
-<p class="card-img-top"></p>
-<p></p>
-</div>
-<div class="body">
-
-<div class="listing-subtitle">
-
-</div>
-<div class="listing-description">
-Healthy rivers are vital for ecosystems and human communities, but invisible pollutants such as nitrate (NO₃⁻) can silently degrade water quality.<br>
-Nitrate…</div></div><div class="metadata"><div class="listing-date"></div><div class="listing-author"></div></div></div><div class="quarto-post image-right" data-index="1" data-categories="bmV3cw==" data-listing-date-sort="1658066400000" data-listing-file-modified-sort="1759898282223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="10"><div class="thumbnail"><p></p><p class="card-img-top"></p><p></p></div><div class="body"><div class="listing-subtitle"></div><div class="listing-description"></div></div><div class="metadata"><div class="listing-date"></div><div class="listing-author"></div></div></div></div><div class="listing-no-matching d-none"></div></a>
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+   …<option value="listing-author" data-direction="asc"></option></select></div><div class="input-group input-group-sm quarto-listing-filter"><span class="input-group-text"><i class="bi bi-search"></i></span><input type="text" class="search form-control" placeholder="Filter"></div></div><div class="list quarto-listing-default"><div class="quarto-post image-right" data-index="0" data-categories="RGF0YSUyMFN0b3J5JTJDV2F0ZXIlMjBRdWFsaXR5" data-listing-date-sort="1760014800000" data-listing-file-modified-sort="1759901958651" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="559"><div class="thumbnail"><p></p><p class="card-img-top"></p><p></p></div><div class="body"><div class="listing-subtitle"></div><div class="listing-categories"><div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMFN0b3J5'); return false;"></div><div class="listing-category" onclick="window.quartoListingCategory('V2F0ZXIlMjBRdWFsaXR5'); return false;"></div></div><div class="listing-description"></div></div><div class="metadata"><div class="listing-date"></div><div class="listing-author"></div></div></div><div class="quarto-post image-right" data-index="1" data-categories="bmV3cw==" data-listing-date-sort="1658066400000" data-listing-file-modified-sort="1759898282223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="10"><div class="thumbnail"><p></p><p class="card-img-top"></p><p></p></div><div class="body"><div class="listing-subtitle"></div><div class="listing-categories"><div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;"></div></div><div class="listing-description"></div></div><div class="metadata"><div class="listing-date"></div><div class="listing-author"></div></div></div></div><div class="listing-no-matching d-none"></div></a>
 </div>
 </div>
 <div class="metadata">
@@ -250,34 +278,33 @@ Nitrate…</div></div><div class="metadata"><div class="listing-date"></div><div
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="V2F0ZXIlMjBRdWFsaXR5JTJDRGF0YSUyMFN0b3J5" data-listing-date-sort="1760014800000" data-listing-file-modified-sort="1759899760358" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="559">
+<div class="quarto-post image-right" data-index="1" data-categories="RGF0YSUyMFN0b3J5JTJDV2F0ZXIlMjBRdWFsaXR5" data-listing-date-sort="1760014800000" data-listing-file-modified-sort="1759901958651" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="559">
 <div class="thumbnail">
-<p><a href="./posts/ruowei-nitrate-blog/index.html" class="no-external"></a></p><a href="./posts/ruowei-nitrate-blog/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/ruowei-nitrate-blog/index_files/figure-html/fig-nitrate-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/ruowei-nitrate-blog/index.html" class="no-external"></a></p>
+<p><a href="./posts/ruowei-nitrate-blog.html" class="no-external"></a></p><a href="./posts/ruowei-nitrate-blog.html" class="no-external">
+<p class="card-img-top"><img src="posts/ruowei-nitrate-blog_files/figure-html/fig-nitrate-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./posts/ruowei-nitrate-blog.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="./posts/ruowei-nitrate-blog/index.html" class="no-external">Tracking Nitrate in Streams</a>
+<a href="./posts/ruowei-nitrate-blog.html" class="no-external">Tracking Nitrate in Streams</a>
 </h3>
 <div class="listing-subtitle">
-<a href="./posts/ruowei-nitrate-blog/index.html" class="no-external"></a>
+<a href="./posts/ruowei-nitrate-blog.html" class="no-external"></a>
 </div>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('V2F0ZXIlMjBRdWFsaXR5'); return false;">
-Water Quality
-</div>
 <div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMFN0b3J5'); return false;">
 Data Story
 </div>
+<div class="listing-category" onclick="window.quartoListingCategory('V2F0ZXIlMjBRdWFsaXR5'); return false;">
+Water Quality
+</div>
 </div>
 <div class="listing-description">
-<a href="./posts/ruowei-nitrate-blog/index.html" class="no-external">Healthy rivers are vital for ecosystems and human communities, but invisible pollutants such as nitrate (NO₃⁻) can silently degrade water quality.<br>
-Nitrate mainly originates…</a>
+<a href="./posts/ruowei-nitrate-blog.html" class="no-external">Healthy rivers are vital for ecosystems and human communities, but invisible pollutants such as nitrate (NO₃⁻) can silently degrade water quality.</a>
 </div>
 </div>
 <div class="metadata">
-<a href="./posts/ruowei-nitrate-blog/index.html" class="no-external">
+<a href="./posts/ruowei-nitrate-blog.html" class="no-external">
 <div class="listing-date">
 Oct 10, 2025
 </div>

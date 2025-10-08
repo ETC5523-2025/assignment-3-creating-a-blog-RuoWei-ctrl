@@ -135,7 +135,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../posts/"> 
+    <a class="nav-link" href="../posts/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -159,8 +159,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="quarto-title column-body">
       <h1 class="title">Tracking Nitrate in Streams</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Water Quality</div>
                 <div class="quarto-category">Data Story</div>
+                <div class="quarto-category">Water Quality</div>
               </div>
                   </div>
   </div>
@@ -211,11 +211,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="problem-description" class="level2">
 <h2 class="anchored" data-anchor-id="problem-description">Problem description</h2>
-<p>Healthy rivers are vital for ecosystems and human communities, but invisible pollutants such as nitrate (NO₃⁻) can silently degrade water quality.<br>
-Nitrate mainly originates from fertiliser runoff and urban wastewater, and excessive levels lead to eutrophication—the growth of algal blooms that deplete oxygen and threaten aquatic life.</p>
-<p>Traditional monitoring based on monthly water samples often misses rapid changes in nitrate levels after rainfall or runoff events.<br>
-A recent study by Kermorvant et al.&nbsp;(2023) used high-frequency in-situ sensors to explore how nitrate concentrations vary through time and how they relate to other water-quality variables such as temperature, dissolved oxygen, and turbidity.<br>
-The goal was to identify which factors most strongly influence nitrate levels across diverse river environments.</p>
+<p>Healthy rivers are vital for ecosystems and human communities, but invisible pollutants such as nitrate (NO₃⁻) can silently degrade water quality.</p>
+<p>Nitrate mainly originates from fertiliser runoff and urban wastewater, and excessive levels lead to eutrophication—the growth of algal blooms that deplete oxygen and threaten aquatic life.</p>
+<p>Traditional monitoring based on monthly water samples often misses rapid changes in nitrate levels after rainfall or runoff events.</p>
+<p>A recent study by Kermorvant et al.&nbsp;(2023) used high-frequency in-situ sensors to explore how nitrate concentrations vary through time and how they relate to other water-quality variables such as temperature, dissolved oxygen, and turbidity.</p>
+<p>The goal was to identify which factors most strongly influence nitrate levels across diverse river environments.</p>
 <hr>
 </section>
 <section id="analysis" class="level2">
@@ -275,7 +275,7 @@ Table&nbsp;1: Average nitrate across three NEON streams.
 <div id="fig-nitrate" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-nitrate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="nitrate-streams_files/figure-html/fig-nitrate-1.png" class="img-fluid figure-img" width="672">
+<img src="ruowei-nitrate-blog_files/figure-html/fig-nitrate-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nitrate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Nitrate concentrations differ strongly across sites.
@@ -284,7 +284,7 @@ Figure&nbsp;1: Nitrate concentrations differ strongly across sites.
 </div>
 </div>
 </div>
-<p>As Figure <a href="#fig-nitrate" class="quarto-xref">Figure&nbsp;1</a> illustrates, nitrate levels increase from natural to agricultural catchments. Sensor data also revealed distinct event responses:</p>
+<p>As Figure <a href="#fig-nitrate" class="quarto-xref">Figure&nbsp;1</a> illustrates, nitrate concentrations vary markedly across the three streams, increasing from natural to agricultural catchments. Sensor data also revealed distinct event responses:</p>
 <p>At Arikaree, nitrate spiked after rainfall, consistent with fertiliser runoff.</p>
 <p>At Lewis Run, heavy flow diluted nitrate because rainfall added relatively clean water.</p>
 <p>Statistical modelling identified six important predictors — temperature, dissolved oxygen, turbidity, specific conductance, water level, and time — that together explained about 99 % of nitrate variation. Among these, specific conductance and dissolved oxygen were the most consistent indicators of nitrate change across all sites.</p>
@@ -539,7 +539,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/ETC5523-2025\.github\.io\/assignment-3-creating-a-blog-RuoWei-ctrl\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
