@@ -2,7 +2,9 @@
 title: "Tracking Nitrate in Streams"
 author: "Ruowei Li"
 date: "2025-10-10"
-categories: [Water Quality, Data Story]
+categories: 
+  - Water Quality
+  - Data Story
 ---
 
 ## Problem description
