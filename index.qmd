@@ -1,7 +1,9 @@
 ---
 title: "ETC5523 Blog Assessment"
 listing:
-  contents: posts
+  contents:
+    - posts/**/*.qmd      
+    - "!posts/index.qmd"  
   type: default
   sort: "date desc"
   categories: true
@@ -11,5 +13,5 @@ page-layout: full
 title-block-banner: true
 ---
 
-Welcome to my ETC5523 blog!  
+Welcome to my ETC5523 blog!
 Here you can find my latest post and reflections for this course.
