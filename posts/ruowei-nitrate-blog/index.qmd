@@ -7,11 +7,14 @@ categories: [Water Quality, Data Story]
 
 ## Problem description
 
-Healthy rivers are vital for ecosystems and human communities, but invisible pollutants such as nitrate (NO₃⁻) can silently degrade water quality.\
+Healthy rivers are vital for ecosystems and human communities, but invisible pollutants such as nitrate (NO₃⁻) can silently degrade water quality.
+
 Nitrate mainly originates from fertiliser runoff and urban wastewater, and excessive levels lead to eutrophication—the growth of algal blooms that deplete oxygen and threaten aquatic life.
 
-Traditional monitoring based on monthly water samples often misses rapid changes in nitrate levels after rainfall or runoff events.\
-A recent study by Kermorvant et al. (2023) used high-frequency in-situ sensors to explore how nitrate concentrations vary through time and how they relate to other water-quality variables such as temperature, dissolved oxygen, and turbidity.\
+Traditional monitoring based on monthly water samples often misses rapid changes in nitrate levels after rainfall or runoff events.
+
+A recent study by Kermorvant et al. (2023) used high-frequency in-situ sensors to explore how nitrate concentrations vary through time and how they relate to other water-quality variables such as temperature, dissolved oxygen, and turbidity.
+
 The goal was to identify which factors most strongly influence nitrate levels across diverse river environments.
 
 ------------------------------------------------------------------------
@@ -51,7 +54,7 @@ ggplot(df, aes(Site, Nitrate)) +
   labs(y = "Nitrate (µM)")
 ```
 
-As Figure @fig-nitrate illustrates, nitrate levels increase from natural to agricultural catchments. Sensor data also revealed distinct event responses:
+As Figure @fig-nitrate illustrates, nitrate concentrations vary markedly across the three streams, increasing from natural to agricultural catchments. Sensor data also revealed distinct event responses:
 
 At Arikaree, nitrate spiked after rainfall, consistent with fertiliser runoff.
 
