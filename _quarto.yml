@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: _site
 
 website:
   title: "Ruowei Li"
@@ -10,7 +11,7 @@ website:
       - text: About
         href: about.qmd
       - text: Blog
-        href: posts/
+        href: posts/index.qmd
     right:
       - icon: github
         aria-label: GitHub

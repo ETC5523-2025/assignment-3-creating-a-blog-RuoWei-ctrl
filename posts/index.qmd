@@ -1,7 +1,13 @@
 ---
 title: "Blog"
 listing:
-  contents: .
-  sort: "date desc"
+  contents:
+    - ./**/*.qmd       
   type: default
+  sort: "date desc"
+  categories: true
+  filter-ui: [search, category]
+  sort-ui: true
+page-layout: full
+listing-exclude: true   
 ---
