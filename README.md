@@ -1,6 +1,12 @@
-
 # ETC5523 Blog Assessment
 
-* This is a **template** for the ETC5523 Blog Assessment. 
-* The author of this blog is **Michael Lydeamore**.
-* The URL for this blog is [https://etc5523-2023.github.io/blog-template/](https://etc5523-2023.github.io/blog-template/)
+🌐 **My published website:**  
+👉 [https://ETC5523-2025.github.io/assignment-3-creating-a-blog-RuoWei-ctrl/](https://ETC5523-2025.github.io/assignment-3-creating-a-blog-RuoWei-ctrl/)
+
+---
+
+* This is my submission for the **ETC5523 Blog Assessment**.  
+* The author of this blog is **Ruowei Li**.  
+* The website was created using **Quarto** and published via **GitHub Pages**.  
+* The blog post presents findings from my Assignment 2 data story:  
+  *Tracking Nitrate in Streams — Exploring how water-quality factors relate to nitrate concentration using high-frequency sensor data.*
